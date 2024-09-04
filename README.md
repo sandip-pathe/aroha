@@ -1,50 +1,108 @@
-# Welcome to your Expo app 👋
+# AROHA IoT dashboard for students
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+Aroha is a React Native application built using Expo and TypeScript for tracking the height and weight of students over time. The app is designed to work alongside an IoT device for measurement.
 
-1. Install dependencies
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Running the Project](#running-the-project)
+- [Contributing](#contributing)
+- [License](#license)
 
+## Getting Started
+
+To get a local copy of the project up and running, follow these steps:
+
+### Prerequisites
+
+- Install [Node.js](https://nodejs.org/) (LTS version recommended)
+- Install [Expo CLI](https://docs.expo.dev/get-started/installation/) globally:
+  ```bash
+  npm install -g expo-cli
+  ```
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sandip-pathe/aroha.git
+   cd your-repo-name
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
-2. Start the app
+3. **Set up Firebase:**
+   - Create a `firebaseconfig.ts` file in the project root and add your Firebase configuration details. This file is ignored by Git.
 
-   ```bash
-    npx expo start
+   Example `firebaseconfig.ts`:
+   ```typescript
+   export const firebaseConfig = {
+     apiKey: "YOUR_API_KEY",
+     authDomain: "YOUR_AUTH_DOMAIN",
+     projectId: "YOUR_PROJECT_ID",
+     storageBucket: "YOUR_STORAGE_BUCKET",
+     messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+     appId: "YOUR_APP_ID"
+   };
    ```
 
-In the output, you'll find options to open the app in a
+4. **Start the development server:**
+   ```bash
+   expo start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+├── assets/               # Static assets (e.g., images, fonts)
+├── components/           # Reusable components
+├── screens/              # Application screens
+├── firebaseconfig.ts     # Firebase configuration (gitignored)
+├── App.tsx               # Entry point of the application
+├── app.json              # Expo configuration
+└── package.json          # Project dependencies
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Running the Project
 
-## Learn more
+1. Run the following command to start the Expo development server:
+   ```bash
+   expo start
+   ```
 
-To learn more about developing your project with Expo, look at the following resources:
+2. Use the Expo Go app on your device or an emulator to preview the app.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Contributing
 
-## Join the community
+We welcome contributions from the community! Follow these steps to get started:
 
-Join our community of developers creating universal apps.
+1. Fork the repository.
+2. Create your feature branch: `git checkout -b feature/AmazingFeature`.
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`.
+4. Push to the branch: `git push origin feature/AmazingFeature`.
+5. Open a pull request.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Code Style
+
+- Ensure that your code adheres to the project's existing code style.
+- If you're unsure about linting, don't worry! We'll help guide you through the process.
+
+### Line Endings (LF/CRLF)
+
+You may see warnings about line endings in `package.json` and `package-lock.json`. This is normal and related to differences in line ending styles between operating systems (LF for Unix, CRLF for Windows). No action is required unless it causes issues in your development environment.
+
+## License
+
+This project is currently not licensed. If you would like to contribute, feel free to reach out for discussions on licensing options.
+```
+
+### Explanation:
+- **Firebase Setup:** The `firebaseconfig.ts` instructions are included since this file is `.gitignore`-d.
+- **Line Ending Warnings:** The explanation is provided for the LF/CRLF warnings, which are common and harmless unless specific issues arise.
+- **Contribution Guidelines:** Basic contribution instructions are included, with a placeholder for a potential open-source license.
+  
+You can customize this template as needed! Let me know if you need any further modifications.
