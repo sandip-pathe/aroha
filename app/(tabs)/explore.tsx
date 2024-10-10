@@ -3,8 +3,15 @@ import React from "react";
 
 const explore = () => {
   return (
-    <View>
-      <Text>explore</Text>
+    <View
+      style={{
+        alignItems: "center",
+        alignContent: "center",
+        justifyContent: "center",
+        flex: 1,
+      }}
+    >
+      <Text style={{ color: "white" }}>HI</Text>
     </View>
   );
 };

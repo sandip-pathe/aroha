@@ -13,7 +13,6 @@ export default function HomeScreen() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      // router.replace("../(modals)/login"); // This is the original line but in our case it is automatically handled by the onAuthStateChanged listener in _layout.tsx
     } catch (error) {
       console.error("Error signing out: ", error);
     }

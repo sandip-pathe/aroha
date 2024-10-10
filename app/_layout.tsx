@@ -44,7 +44,6 @@ const RootLayoutNav: React.FC<{ router: any }> = ({ router }) => {
 
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is authenticated, navigate to the main app (tabs)
         router.push("/(tabs)");
       } else {
         // User is not authenticated, navigate to the login screen
